@@ -29,7 +29,7 @@ df.select("a", "b")  # ❌ Doesn't work like pandas
 7. null vs NaN
 pl.col("a").is_null()  # For None/NULL values
 pl.col("a").is_nan()  # For NaN (only floats)
-# They're different!
+ 
 
 8. Casting Syntax
 pl.col("a").cast(pl.Int64)  # ✅ Polars dtype
@@ -41,7 +41,7 @@ pl.col("name").to_uppercase()  # ❌
 
 10. Join Behavior Defaults
 df1.join(df2, on="id")  # Default is INNER join (like SQL)
-# Pandas default is LEFT join!
+ 
 
 11. Filter Requires Boolean Expression
 df.filter(pl.col("age") > 30)  # ✅
